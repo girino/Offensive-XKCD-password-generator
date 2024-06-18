@@ -1,0 +1,3 @@
+[submodule "xkcdpass/static/badwords"]
+	path = xkcdpass/static/badwords
+	url = https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words

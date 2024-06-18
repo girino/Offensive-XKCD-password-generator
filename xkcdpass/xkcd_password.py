@@ -61,7 +61,8 @@ if sys.version_info[0] >= 3:
     xrange = range
 
 
-DEFAULT_WORDFILE = "eff-long"
+#DEFAULT_WORDFILE = "eff-long"
+DEFAULT_WORDFILE = "en"
 DEFAULT_DELIMITERS = [" ", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")",
                       "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
@@ -91,7 +92,7 @@ def locate_wordfile(wordfile=None):
     common_word_files = []
     static_dir = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
-        'static')
+        'static/badwords')
 
     if wordfile is not None:
         # wordfile can be in static dir or provided as a complete path
