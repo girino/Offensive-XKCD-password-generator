@@ -126,6 +126,8 @@ Word lists are provided by https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obsc
 The word list is licensed under the `CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`_ license. The dafault is "en" (for english) 
 but you can use the following languages: "en", "es", "fi", "it", "de", "no", "fr", "pt", "sv", among others (see wordlist project for full list).
 
+In a recent contribution by Foca Vey, we now have Tupi-Guarany words in the wordlist. use the flag "-w tupi" to enable this wordlist.
+
 Using xkcdpass as an imported module
 ====================================
 
