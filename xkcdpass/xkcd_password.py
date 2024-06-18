@@ -93,10 +93,14 @@ def locate_wordfile(wordfile=None):
     static_dir = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
         'static/badwords')
+    static_dir2 = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        'static/mybadwords')
 
     if wordfile is not None:
         # wordfile can be in static dir or provided as a complete path
         common_word_files.append(os.path.join(static_dir, wordfile))
+        common_word_files.append(os.path.join(static_dir2, wordfile))
         common_word_files.append(os.path.expanduser(wordfile))
 
     common_word_files.extend([
