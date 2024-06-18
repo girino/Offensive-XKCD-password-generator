@@ -1,4 +1,5 @@
 include xkcdpass/static/*
+include xkcdpass/static/badwords/*
 include tests/*
 include examples/*
 include LICENSE.BSD

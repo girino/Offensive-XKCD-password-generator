@@ -3,12 +3,12 @@ from io import open
 import sys
 
 setup(
-    name='xkcdpass',
-    version='1.19.9',
-    author='Steven Tobin',
-    author_email='steventtobin@gmail.com',
-    url='https://github.com/redacted/XKCD-password-generator',
-    description='Generate secure multiword passwords/passphrases, inspired by XKCD',
+    name='xkcdpass-offensive',
+    version='0.0.1',
+    author='Girino Vey (offensive fork)',
+    author_email='girinovey@girino.org',
+    url='https://github.com/girino/Offensive-XKCD-password-generator',
+    description='Generate offensive, but secure, multiword passwords/passphrases, inspired by XKCD',
     long_description=open('README.rst', encoding='utf-8').read(),
     #packages=['xkcdpass'],
     packages=find_namespace_packages(exclude=["examples", "*.tests", "*.tests.*", "tests.*", "tests"]),

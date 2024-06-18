@@ -1,37 +1,36 @@
-xkcdpass
+xkcdpass-offensive
 ========
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
    :alt: Join the chat at https://gitter.im/redacted/XKCD-password-generator
    :target: https://gitter.im/redacted/XKCD-password-generator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
-A flexible and scriptable password generator which generates strong passphrases, inspired by `XKCD 936 <http://xkcd.com/936/>`_::
+A flexible and scriptable password generator which generates offensive, but strong, passphrases, inspired by `XKCD 936 <http://xkcd.com/936/>`_::
 
     $ xkcdpass
-    > correct horse battery staple
+    > beep beeeeeep beep-beep beep (censored for your protection)
 
 .. image:: http://imgs.xkcd.com/comics/password_strength.png
 
+This is a fork of the original `xkcdpass <
 
+Wordlists provided by: https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
 
 Install
 =======
 
-``xkcdpass`` can be easily installed using pip::
+``xkcdpass-offensive`` can be installed manually::
 
-    pip install xkcdpass
-
-or manually::
-
+    git clone https://github.com/girino/Offensive-XKCD-password-generator
+    cd Offensive-XKCD-password-generator
+    git submodule update --init --recursive # to get the wordlist submodule
     python setup.py install
 
 
 
 Source
 ~~~~~~
-The latest development version can be found on github: https://github.com/redacted/XKCD-password-generator
-
-Contributions welcome and gratefully appreciated!
+The latest development version can be found on github: https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words (it's a fork from the original at: https://github.com/redacted/XKCD-password-generator)
 
 
 
@@ -123,31 +122,9 @@ A concise overview of the available ``xkcdpass`` options can be accessed via::
 Word lists
 ==========
 
-Several word lists are provided with the package. The default, `eff-long`, was specifically designed by the EFF for `passphrase generation  <https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases>`_ and is licensed under `CC BY 3.0 <https://creativecommons.org/licenses/by/3.0/us/>`_. As it was originally intended for use with Diceware ensure that the number of words in your passphrase is at least six when using it. Two shorter variants of that list, `eff-short` and `eff-special`, are also included. Please refer to the EFF documentation linked above for more information.
-
-The original word list from `xkcdpass` versions earlier than 1.10.0 is also provided as a convenience, and is available under `legacy`. This word list is derived mechanically from `12Dicts <http://wordlist.aspell.net/12dicts/>`_ by Alan Beale. It is the understanding of the author of ``xkcdpass`` that purely mechanical transformation does not imbue copyright in the resulting work. The documentation for the 12Dicts project at
-http://wordlist.aspell.net/12dicts/ contains the following dedication:
-
-..
-
-    The 12dicts lists were compiled by Alan Beale. I explicitly release them to the public domain, but request acknowledgment of their use.
-
-Note that the generator can be used with any word file of the correct format: a file containing one 'word' per line.  
-
-Additional languages
-~~~~~~~~~~~~~~~~~~~~
-
-- Spanish: a modifed version of archive.umich.edu in the `/linguistics` directory. It includes ~80k words. Less than 5 char. and latin-like words were deleted using regex. This list is public domain, see `here <http://www.umich.edu/~archive/linguistics/00readme.txt>`_.
-- Finnish: a modified version of the Institute for the Languages of Finland `XML word list <http://kaino.kotus.fi/sanat/nykysuomi/>`_. Profanities and expressions containing spaces were removed using regex. The resulting list contains ~93k words. The list is published under GNU LGPL, EUPL 1.1 and CC-BY 3.0 licenses.
-- Italian: generated from dumps of the Italian-language Wikipedia, which is released under the Creative Commons Attribution-Share-Alike 3.0 licence.
-- German (ger-anlx): based on `this GPL v3 list <https://github.com/dassencio/langcmp/blob/master/wordlists/top10000de.txt>`_. Single and double character words have been removed.
-- German (eff_large_de_sample.wordlist): based on `this public domain dictionary <https://sourceforge.net/projects/germandict/>`_. Converted to UTF-8 and randomly sampled to reduce file size. 
-- Norwegian: a modified version of `Norsk Ordbank in Norwegian Bokmål 2005 <https://www.nb.no/sprakbanken/show?serial=oai%3Anb.no%3Asbr-5&lang=en>`_, 2018-06-28 update, which is released under the `CC-BY 4.0 license <https://creativecommons.org/licenses/by/4.0/>`_. Regex has been used to alter the list for cleanup and removal of words with impractical characters. The resulting list contains ~137k words.
-- French: One cleaned version of `this list <https://packetstormsecurity.com/files/download/32007/french.gz>`_ (public domain), and one filtered to remove potentially offensive words.
-- Portuguese: Converted variant of the LibreOffice / Firefox Portuguese dictionary (from `this link <https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/Portuguese%20(European).dic>`_. GPL and BSD licenced.
-- Swedish: a modified version of `Martin Lindhe's Swedish word list <https://github.com/martinlindhe/wordlist_swedish>`_ (MIT license). Modifications also released under MIT license.
-
-Additional language word lists are always welcome!
+Word lists are provided by https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words imported as a submodule. 
+The word list is licensed under the `CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>`_ license. The dafault is "en" (for english) 
+but you can use the following languages: "en", "es", "fi", "it", "de", "no", "fr", "pt", "sv", among others (see wordlist project for full list).
 
 Using xkcdpass as an imported module
 ====================================
@@ -195,6 +172,7 @@ or setting the appropriate environment variable::
 
 Changelog
 =========
+- **0.0.1**  Numbering reset, since project was forked. Added support for offensive wordlists.
 - **1.19.9** Remove usage of deprecated `assertEquals` in tests
 - **1.19.8** Enables `python -m xkcdpass` usage
 - **1.19.7** Adds Swedish wordlist, improvements to test suite, improvements to setup.py (excludes examples from install) 
